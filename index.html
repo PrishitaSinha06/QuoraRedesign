@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora Redesign Prototype</title>
+    <!-- Link to the exported custom CSS -->
+    <link rel="stylesheet" href="custom.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, div {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header style="background-color: #0078d4; color: white; padding: 16px; text-align: center; font-size: 20px;">
+        Quora Redesign Prototype
+    </header>
+
+    <!-- Main Layout Wrapper -->
+    <div class="q-box qu-wide">
+        
+        <!-- Left Sidebar -->
+        <div class="q-box dom_annotate_feed_switcher">
+            <h2>Left Sidebar</h2>
+            <p>This section represents the left sidebar content.</p>
+            <div class="q-box qu-py--small qu-color--gray_light">
+                Lower part of the sidebar.
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="q-box" data-testid="mainContent">
+            <h1 class="q-text qu-bold">Main Content Area</h1>
+            <div class="q-box qu-hover--bg--darken">
+                <p>This card represents an answer or a post.</p>
+            </div>
+            <div class="q-box qu-hover--bg--darken">
+                <p>Another post card for demonstration.</p>
+            </div>
+            <button class="q-click-wrapper qu-button">Interactive Button</button>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="q-box" data-testid="new-post-bar">
+            <h2>New Post Bar</h2>
+            <div class="new-post-button">Create New Post</div>
+            <div class="q-box" data-testid="messaging-bar">
+                <div class="dm-text">Direct Messages</div>
+                <div class="dm-icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #f8f8f8; padding: 16px; text-align: center;">
+        &copy; 2024 Quora Redesign Prototype
+    </footer>
+</body>
+</html>
