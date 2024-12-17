@@ -13,53 +13,91 @@
         body, h1, h2, h3, p, div {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Default body styling */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8f8f8;
+            color: #2b2b2b;
+            line-height: 1.8;
+        }
+
+        header, footer {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <!-- Top Navigation Bar -->
-    <header style="background-color: #0078d4; color: white; padding: 16px; text-align: center; font-size: 20px;">
+    <header style="background-color: #0078d4; color: white; padding: 16px; font-size: 20px; font-weight: 600;">
         Quora Redesign Prototype
     </header>
 
-    <!-- Main Layout Wrapper -->
+    <!-- Main Layout Grid -->
     <div class="q-box qu-wide">
-        
+
         <!-- Left Sidebar -->
-        <div class="q-box dom_annotate_feed_switcher">
-            <h2>Left Sidebar</h2>
-            <p>This section represents the left sidebar content.</p>
-            <div class="q-box qu-py--small qu-color--gray_light">
-                Lower part of the sidebar.
+        <aside class="q-box dom_annotate_feed_switcher">
+            <h2 style="margin-bottom: 16px;">Topics</h2>
+            <ul style="list-style: none; padding-left: 0; font-size: 18px; line-height: 2;">
+                <li>Science</li>
+                <li>Music</li>
+                <li>Health</li>
+                <li>Technology</li>
+                <li>Sports</li>
+                <li>Education</li>
+            </ul>
+            <div class="q-box qu-py--small qu-color--gray_light" style="margin-top: 20px;">
+                <p>Lower Sidebar Content: Explore more options here.</p>
             </div>
-        </div>
+        </aside>
 
         <!-- Main Content Area -->
-        <div class="q-box" data-testid="mainContent">
-            <h1 class="q-text qu-bold">Main Content Area</h1>
-            <div class="q-box qu-hover--bg--darken">
-                <p>This card represents an answer or a post.</p>
-            </div>
-            <div class="q-box qu-hover--bg--darken">
-                <p>Another post card for demonstration.</p>
-            </div>
-            <button class="q-click-wrapper qu-button">Interactive Button</button>
-        </div>
+        <main class="q-box" data-testid="mainContent">
+            <h1 class="q-text qu-bold">Main Content Feed</h1>
+
+            <!-- Post Cards -->
+            <section class="q-box qu-hover--bg--darken">
+                <h3 style="margin-bottom: 8px;">Post Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sapien nunc.</p>
+            </section>
+
+            <section class="q-box qu-hover--bg--darken">
+                <h3 style="margin-bottom: 8px;">Post Title 2</h3>
+                <p>Quisque vel lorem eget nisl suscipit consequat. Aliquam erat volutpat.</p>
+            </section>
+
+            <section class="q-box qu-hover--bg--darken">
+                <h3 style="margin-bottom: 8px;">Post Title 3</h3>
+                <p>Vivamus in lectus in libero bibendum convallis nec nec justo.</p>
+            </section>
+
+            <button class="q-click-wrapper qu-button" style="margin-top: 16px;">
+                Interactive Button
+            </button>
+        </main>
 
         <!-- Right Sidebar -->
-        <div class="q-box" data-testid="new-post-bar">
-            <h2>New Post Bar</h2>
+        <aside class="q-box" data-testid="new-post-bar">
+            <h2 style="margin-bottom: 16px;">New Post</h2>
             <div class="new-post-button">Create New Post</div>
+
             <div class="q-box" data-testid="messaging-bar">
                 <div class="dm-text">Direct Messages</div>
                 <div class="dm-icon"></div>
             </div>
-        </div>
+        </aside>
     </div>
 
     <!-- Footer -->
-    <footer style="background-color: #f8f8f8; padding: 16px; text-align: center;">
-        &copy; 2024 Quora Redesign Prototype
+    <footer style="background-color: #f8f8f8; padding: 16px; font-size: 14px;">
+        &copy; 2024 Quora Redesign Prototype | All Rights Reserved
     </footer>
 </body>
 </html>
